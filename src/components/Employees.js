@@ -40,21 +40,21 @@ class Employees extends Component {
 
                 },
                 {
-                    label: "lastName",
+                    label: "Last Name",
                     field: "lastName",
                     sort: "asc",
                     width: 150
 
                 },
                 {
-                    label: "email",
+                    label: "E-Mail",
                     field: "email",
                     sort: "asc",
                     width: 150
 
                 },
                 {
-                    label: "phoneNum",
+                    label: "Phone Number",
                     field: "phoneNum",
                     sort: "asc",
                     width: 150
