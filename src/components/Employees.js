@@ -1,7 +1,10 @@
+//Required imports
 import React, { Component } from "react";
 import axios from "axios";
 import { MDBDataTable } from "mdbreact";
 
+
+//Class function.
 class Employees extends Component {
 
     state = {
