@@ -11,6 +11,7 @@ class Employees extends Component {
         employeeRecords: []
     };
 
+    //API call for randomuser.me
     componentDidMount = () => {
         axios.get("https://randomuser.me/api/?results=200&nat=us")
             .then(response => {
@@ -31,6 +32,7 @@ class Employees extends Component {
             });
     };
 
+    //Render to the table.
     render() {
 
         var employeeData = {
