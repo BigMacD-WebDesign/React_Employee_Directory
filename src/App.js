@@ -1,3 +1,4 @@
+//Required Imports.
 import React from 'react';
 import './App.css';
 import Employees from "./components/Employees";
@@ -7,7 +8,7 @@ import "mdbreact/dist/css/mdb.css";
 import Header from "./components/Header";
 
 
-
+//App Function to return data from components.
 function App() {
   return (
     <div className="App">
