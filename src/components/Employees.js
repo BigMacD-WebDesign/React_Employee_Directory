@@ -15,7 +15,7 @@ class Employees extends Component {
     componentDidMount = () => {
         axios.get("https://randomuser.me/api/?results=200&nat=us")
             .then(response => {
-                console.log(response);
+                
                 var employeeRecords = []
                 for (let i = 0; i < response.data.results.length; i++) {
                     let employee = {
@@ -28,7 +28,7 @@ class Employees extends Component {
                     console.log(employeeRecords);
                 }
                 this.setState({ employeeRecords: employeeRecords });
-                console.log(employeeRecords,this.state.employeeRecords);
+                
             });
     };
 
