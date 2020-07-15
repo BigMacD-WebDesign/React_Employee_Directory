@@ -15,10 +15,11 @@ class Employees extends Component {
     componentDidMount = () => {
         axios.get("https://randomuser.me/api/?results=200&nat=us")
             .then(response => {
-                
+
                 var employeeRecords = []
                 for (let i = 0; i < response.data.results.length; i++) {
                     let employee = {
+                        picture: <img alt={`${response.data.results[i].name.first} ${response.data.results[i].name.last}`} src={`${response.data.results[i].picture.medium}`}></img>,
                         firstName: response.data.results[i].name.first,
                         lastName: response.data.results[i].name.last,
                         email: response.data.results[i].email,
@@ -28,7 +29,7 @@ class Employees extends Component {
                     console.log(employeeRecords);
                 }
                 this.setState({ employeeRecords: employeeRecords });
-                
+
             });
     };
 
@@ -37,6 +38,10 @@ class Employees extends Component {
 
         var employeeData = {
             columns: [
+                {
+                    label: "Image",
+                    field: "picture"
+                },
                 {
                     label: "First Name",
                     field: "firstName",
@@ -72,7 +77,7 @@ class Employees extends Component {
 
         return (
             <div>
-                <MDBDataTable bordered responsive striped data={employeeData}/>
+                <MDBDataTable bordered responsive striped data={employeeData} />
             </div>
         )
     }
